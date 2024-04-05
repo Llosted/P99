@@ -8,7 +8,7 @@ getgenv().autoWorldConfig = {
 
 print("Made By firedevil (Ryan | 404678244215029762 | https://discord.gg/ettP4TjbAb)")
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Qwers1221/Roblox_Scripts/master/PetSimulator99/AutoWorld/WITH_TNT/WaitForGameLoad.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Llosted/P99/main/AutoWorld/WaitForGameLoad.lua"))()
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local LocalPlayer = game:GetService("Players").LocalPlayer
