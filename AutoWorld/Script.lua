@@ -6,4 +6,4 @@ getgenv().autoWorldConfig = {
 -- Max Zone For World 1: 99
 -- Max Zone For World 2: 124
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Qwers1221/Roblox_Scripts/master/PetSimulator99/AutoWorld/WITH_TNT/AutoWorld.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Llosted/P99/main/AutoWorld/AutoWorld.lua"))()
