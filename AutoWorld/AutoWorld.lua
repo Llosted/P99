@@ -31,7 +31,6 @@ end
 
 local iter = 0
 local function teleportToMaxZone()
-	iter = iter + 1
 	local zoneName, maxZoneData = require(ReplicatedStorage.Library.Client.ZoneCmds).GetMaxOwnedZone()
     while currentZone == zoneName do
         zoneName, maxZoneData = require(ReplicatedStorage.Library.Client.ZoneCmds).GetMaxOwnedZone()
@@ -78,6 +77,7 @@ local function teleportToMaxZone()
 	
 	task.wait(2)
 	game:GetService("ReplicatedStorage").Network.TNT_Crate_Consume:InvokeServer()
+	iter = iter + 1
 	if iter >= 49 then
 		task.wait(1)
 		print(iter)
