@@ -29,7 +29,9 @@ require(ReplicatedStorage.Library.Client.PlayerPet).CalculateSpeedMultiplier = f
     return 200
 end
 
+local iter = 0
 local function teleportToMaxZone()
+	iter = iter + 1
 	local zoneName, maxZoneData = require(ReplicatedStorage.Library.Client.ZoneCmds).GetMaxOwnedZone()
     while currentZone == zoneName do
         zoneName, maxZoneData = require(ReplicatedStorage.Library.Client.ZoneCmds).GetMaxOwnedZone()
@@ -122,11 +124,9 @@ if nextRebirthData then
     rebirthZone = nextRebirthData.ZoneNumberRequired
 end
 
-local iter = 0
 task.spawn(function()
     print("Starting zone purchase service")
     while unfinished do
-        iter = iter + 1
         local nextZoneName, nextZoneData = require(game:GetService("ReplicatedStorage").Library.Client.ZoneCmds).GetNextZone()
         local success, _ = game:GetService("ReplicatedStorage").Network.Zones_RequestPurchase:InvokeServer(nextZoneName)
         if success then
