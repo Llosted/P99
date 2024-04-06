@@ -77,8 +77,8 @@ local function teleportToMaxZone()
 	task.wait(2)
 	game:GetService("ReplicatedStorage").Network.TNT_Crate_Consume:InvokeServer()
 	if maxZoneData.ZoneNumber >= 49 then
-		task.wait(1)
-		print("LOL")
+		task.wait(2)
+		print("Zone49+ TNTx2")
 		game:GetService("ReplicatedStorage").Network.TNT_Crate_Consume:InvokeServer()
     end
 
